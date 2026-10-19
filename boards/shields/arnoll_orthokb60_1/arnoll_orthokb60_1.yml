@@ -1,0 +1,8 @@
+file_format: "1"
+id: arnoll_orthokb60_1
+name: Arnoll OrthoKB60 1
+type: shield
+url: https://github.com/theArnoll/OrthoKeyboard
+requires: [seeed_xiao_nrf52840]
+features:
+  - keys

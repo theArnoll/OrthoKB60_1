@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/arnoldlucario/Library/CloudStorage/GoogleDrive-s10054@ms2.kjes.kh.edu.tw/其他電腦/我的電腦/DevelopmentFiles/Hardware/OrtholinearKB/OrthoKB60_1",
+      "program": "/Users/arnoldlucario/Library/CloudStorage/GoogleDrive-s10054@ms2.kjes.kh.edu.tw/其他電腦/我的電腦/DevelopmentFiles/Hardware/OrtholinearKB/OrthoKB60_1/build/Debug/outDebug"
+    }
+  ]
+}

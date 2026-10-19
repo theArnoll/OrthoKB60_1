@@ -1,0 +1,4 @@
+config SHIELD_ARNOLL_ORTHOKB60_1
+    def_bool $(shields_list_contains,arnoll_orthokb60_1)
+    select SPI
+    # https://github.com/petejohanson/revxlp-config/blob/main/config/boards/shields/revxlp/Kconfig.shield

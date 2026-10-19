@@ -1,0 +1,4 @@
+*-backups/
+*-pinout.*
+*.kicad_pro.lck
+.DS_Store
