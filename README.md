@@ -6,4 +6,12 @@ A non-QWERTY-friendly 100% orthorlinear keyboard
 
 ## Development Stage
 
-Change the configuration to 60% keyboard.
+- [X] IO definition ([.overlay](./boards/shields/arnoll_orthokb100_1/arnoll_orthokb100_1.overlay))
+  - Column: `&shifter` 0~20 which `cs-gpio` is `&xiao_d 7`
+  - Row: `&xiao_d` 1~6
+- [X] RC() transform ([.overlay](./boards/shields/arnoll_orthokb100_1/arnoll_orthokb100_1.overlay))
+- [X] physical layout and position_map layout ([.overlay](./boards/shields/arnoll_orthokb100_1/arnoll_orthokb100_1.overlay))
+- [ ] First layer keymap
+- [ ] Layout Shift layer keymap
+- [ ] fn functions
+- [ ] AE, OE, UE, ES

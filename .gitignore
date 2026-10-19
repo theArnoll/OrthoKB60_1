@@ -1,4 +1,8 @@
 *-backups/
-*-pinout.*
-*.kicad_pro.lck
+*pinout.*
+*.kicad_*.lck
 .DS_Store
+/PCB/.history
+.vscode/
+*.exe
+*.out
