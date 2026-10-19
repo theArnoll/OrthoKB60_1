@@ -2,7 +2,7 @@ if SHIELD_ARNOLL_ORTHOKB60_1
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "Arnoll OrthoKB60"
+    default "ArnollOrthoKB60"
     #        1234567890123456
 
 choice ZMK_HID_REPORT_TYPE
