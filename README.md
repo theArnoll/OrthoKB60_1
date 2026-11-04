@@ -33,6 +33,7 @@ Keypad layer (At fn+U): Other keys are transparent but LAlt becomes RAlt, so if 
     - Hardware Dvorak layer (&kp SQT &kp COMMA &kp DOT &kp P, ...)
     - Mac Main layer (* mac fn / &kp GLOBE)
     - fn layer
+    - Mac fn layer
     - fn2 layer
     - Numpad layer
     - Leave custom layer 1~3

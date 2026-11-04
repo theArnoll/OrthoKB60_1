@@ -18,11 +18,22 @@
                 , <&macro_release &kp LSHFT> ;
         };
 
-        test_macro: test_macro {
+        layoutShift-tapShift: layoutShift-tapShift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp L &kp A &kp Y &kp E &kp R
-                                &kp S &kp W &kp I &kp T &kp C &kp H> ;
+            bindings = <&macro_tap &tog 1 &kp LSHFT> ;
+        };
+
+        layoutShift-Supr-Space: layoutShift-Supr-Space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &tog 1 &macro_press &kp LGUI &macro_tap &kp SPACE &macro_release &kp LGUI> ;
+        };
+
+        layoutShift-Ctrl-Space: layoutShift-Ctrl-Space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &tog 1 &macro_press &kp LCTRL &macro_tap &kp SPACE &macro_release &kp LCTRL> ;
         };
 
         swLyr: swLyr {
@@ -38,29 +49,59 @@
 
         default_layer { // Layer 0
             bindings = <
-                &kp I    &kp 2    &kp 3
-                &kp U    &kp 5    &kp J
-                &kp T    &to 6    &kp G
-                &kp R    &to 1    &studio_unlock
+                &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL &kp BSPC
+                &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LBKT  &kp RBKT  &kp BSLASH
+                &kp CAPS  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI &kp QUOTE &kp END &kp ENTER
+                &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp SLASH &kp HOME &kp UP &layoutShift-tapShift
+                &kp LCTRL &kp LGUI &kp LALT                &kp SPACE                &kp F13 &mo 3 &kp LEFT &kp DOWN &kp RIGHT
             >;
         };
 
-        keypad_layer { // Layer 1
+        default_layer { // Layer 1 | Hardware Dvorak
             bindings = <
-                &kp KP_N7 &kp KP_N8 &kp KP_N9
-                &kp KP_N4 &kp KP_N5 &kp KP_N6
-                &kp KP_N1 &kp KP_N2 &kp KP_N3
-                &kp KP_N0 &to 0     &to 6
+                &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp LBKT  &kp RBKT &kp BSPC
+                &kp TAB   &kp QUOTE &kp COMMA &kp DOT &kp P &kp Y &kp F &kp G &kp C &kp R &kp L &kp SLASH &kp EQUAL &kp BSLASH
+                &kp CAPS  &kp A  &kp O  &kp E  &kp U  &kp I  &kp D  &kp H  &kp T  &kp N  &kp S &kp MINUS &kp END &kp ENTER
+                &kp LSHFT &kp SEMI &kp Q  &kp J  &kp K  &kp X  &kp B  &kp M &kp W  &kp V &kp Z &kp HOME &kp UP &layoutShift-tapShift
+                &kp LCTRL &kp LGUI &kp LALT                &kp SPACE                &kp F13 &mo 3 &kp LEFT &kp DOWN &kp RIGHT
             >;
         };
 
-        media_layer { // Layer 2
-            // kp C = J, P = L, Y = F, K = T, I = C
+        default_layer { // Layer 2 | macOS Layer
             bindings = <
-                &kp C_VOL_UP &kp C            &kp K
-                &kp C_MUTE   &kp C_PLAY_PAUSE &kp I
-                &kp C_VOL_DN &kp P            &kp Y
-                &kp I        &to 1            &to 6
+                &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N10  &kp MINUS &kp EQUAL &kp BSPC
+                &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P    &kp LBKT  &kp RBKT  &kp BSLASH
+                &kp CAPS  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI &kp QUOTE &kp END   &kp ENTER
+                &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp SLASH &kp HOME &kp UP &layoutShift-tapShift
+                &kp LCTRL &kp LALT &kp LGUI                &kp SPACE                &kp F13 &mo 4 &kp LEFT &kp DOWN &kp RIGHT
+            >;
+        };
+
+        default_layer { // Layer 3 | fn Layer (imcomplete)
+            bindings = <
+                &kp ESC &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &kp C_VOL_UP &kp C_VOL_DN &kp DEL
+                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans  &trans  &trans  &trans  &trans  &trans &trans &C_PLAY_PAUSE
+                &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans &kp PAGE_DOWN &trans
+                &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_UP &trans &to 2
+                &trans &trans  &kp RALT                       &trans                         &RALT &trans &mo 5 &kp GLOBE &kp RALT
+            >;
+        };
+        default_layer { // Layer 4 | Mac fn Layer (imcomplete)
+            bindings = <
+                &kp ESC &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &kp C_VOL_UP &kp C_VOL_DN &kp DEL
+                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans  &trans  &trans  &trans  &trans  &trans &trans &C_PLAY_PAUSE
+                &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &trans
+                &trans &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans &trans &to 0
+                &trans &trans  &kp RALT                  &trans                         &RALT &trans &mo 5 &kp GLOBE &kp RGUI
+            >;
+        };
+        default_layer { // Layer 5 | fn2 Layer (imcomplete)
+            bindings = <
+                &studio_unlock &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans         &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans         &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans         &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &to 2
+                &trans         &trans &trans                 &trans                &RALT &trans &kp GLOBE &kp DOWN &kp RALT
             >;
         };
 
@@ -70,24 +111,6 @@
                 &bt BT_SEL 3   &bt BT_SEL 4 &bt BT_CLR 
                 &bt BT_CLR_ALL &out OUT_BLE &out OUT_USB
                 &to 1          &to 0        &to 6
-            >;
-        };
-
-        user_define_layer1 { // Layer 4
-            bindings = <
-                &kp B &kp A &kp C
-                &kp K &kp U &kp P
-                &kp L &kp A &kp Y
-                &kp R &to 0 &to 6
-            >;
-        };
-
-        user_define_layer2 { // Layer 5
-            bindings = <
-                &kp B &kp A &kp C
-                &kp K &kp U &kp P
-                &kp L &kp A &kp Y
-                &kp R &to 0 &to 6
             >;
         };
 

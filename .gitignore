@@ -3,6 +3,10 @@
 *.kicad_*.lck
 .DS_Store
 /PCB/.history
-.vscode/
+/.vscode
 *.exe
 *.out
+*Plate.kicad_pro
+*Plate.kicad_prl
+production/
+/PCB/jlcpcb

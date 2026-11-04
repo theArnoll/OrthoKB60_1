@@ -1,0 +1,9 @@
+Comment,Designator,Footprint,LCSC,Quantity
+MX_1.00u_PG151101S11,"REF**,REF**1,REF**10,REF**11,REF**12,REF**13,REF**14,REF**15,REF**16,REF**17,REF**18,REF**19,REF**2,REF**20,REF**21,REF**22,REF**23,REF**24,REF**25,REF**26,REF**27,REF**28,REF**29,REF**3,REF**30,REF**31,REF**32,REF**33,REF**34,REF**35,REF**36,REF**37,REF**38,REF**39,REF**4,REF**40,REF**41,REF**42,REF**43,REF**44,REF**45,REF**46,REF**47,REF**5,REF**6,REF**7,REF**8,REF**9",MX_Hotswap_1.00u,C49352235,48
+Nexperia_CFP3_SOD-123W,"Diode,Diode1,Diode10,Diode11,Diode12,Diode13,Diode14,Diode15,Diode16,Diode17,Diode18,Diode19,Diode2,Diode20,Diode21,Diode22,Diode23,Diode24,Diode25,Diode26,Diode27,Diode28,Diode29,Diode3,Diode30,Diode31,Diode32,Diode33,Diode34,Diode35,Diode36,Diode37,Diode38,Diode39,Diode4,Diode40,Diode41,Diode42,Diode43,Diode44,Diode45,Diode46,Diode47,Diode48,Diode49,Diode5,Diode50,Diode51,Diode52,Diode53,Diode6,Diode7,Diode8,Diode9",Nexperia_CFP3_SOD-123W,C81598,54
+PinSocket_1x02_P2.54mm_Vertical,Batt-XIAO,PinSocket_1x02_P2.54mm_Vertical,,1
+DIP-16_W7.62mm,74595,DIP-16_W7.62mm,,1
+R_0603_1608Metric,R_LED,R_0603_1608Metric,,1
+LED_D3.0mm,LED,LED_D3.0mm,,1
+C_0603_1608Metric,0.1uF,C_0603_1608Metric,,1
+JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal,BAT,JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal,,1
