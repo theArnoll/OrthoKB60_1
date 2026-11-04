@@ -30,8 +30,8 @@ Keypad layer (At fn+U): Other keys are transparent but LAlt becomes RAlt, so if 
 - [ ] Keymap
   - Layers
     - (0) Main layer (&kp Q &kp W, ...)
-    - (1) Hardware Dvorak layer (&kp SQT &kp COMMA &kp DOT &kp P, ...)
-    - (2) Mac Main layer (* mac fn / &kp GLOBE)
+    - (1) Mac Main layer (* mac fn / &kp GLOBE)
+    - (2) Hardware Dvorak layer (&kp SQT &kp COMMA &kp DOT &kp P, ...)
     - (3) fn layer
     - (4) Mac fn layer
     - (5) fn2 layer

@@ -10,50 +10,38 @@
 
 / {
     macros {  // https://v0-3-branch.zmk.dev/docs/keymaps/behaviors/macros
-        zed_em_kay: zed_em_kay {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&macro_release &kp LSHFT> ;
-        };
 
         layoutShift_tapShift: layoutShift_tapShift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &tog 1 &kp LSHFT> ;
+            bindings = <&macro_tap &tog 2 &kp LSHFT> ;
         };
 
         layoutShift_tapCaps: layoutShift_Caps {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &tog 1 &kp CAPSLOCK> ;
+            bindings = <&macro_tap &tog 2 &kp CAPSLOCK> ;
         };
 
         layoutShift_Supr_Space: layoutShift_Supr_Space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &tog 1 &macro_press &kp LGUI &macro_tap &kp SPACE &macro_release &kp LGUI> ;
+            bindings = <&macro_tap &tog 2 &macro_press &kp LGUI &macro_tap &kp SPACE &macro_release &kp LGUI> ;
         };
 
         layoutShift_Ctrl_Space: layoutShift_Ctrl_Space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &tog 1 &macro_press &kp LCTRL &macro_tap &kp SPACE &macro_release &kp LCTRL> ;
+            bindings = <&macro_tap &tog 2 &macro_press &kp LCTRL &macro_tap &kp SPACE &macro_release &kp LCTRL> ;
         };
 
         natuIM_zhQt: natuIM_zhQt {  // A paid input method for Chinese. 自然輸入法引號預設固定位置，輸入後自動把游標放到引號中間
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL &macro_tap &kp 7 &macro_release &kp LCTRL
+            bindings = <&macro_press &kp LCTRL &macro_tap &kp N7 &macro_release &kp LCTRL
                         &macro_tap &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp N3 &kp N4 &kp ESC &kp ENTER &kp LEFT> ;
         };
 
-        swLyr: swLyr {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &to 1 &kp N0> ;
-        };
     };
 
     keymap {
@@ -70,17 +58,7 @@
             >;
         };
 
-        Hardware_Dvorak { // Layer 1 | Hardware Dvorak
-            bindings = <
-                &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8  &kp N9  &kp N0 &kp LBKT  &kp RBKT  &kp BSPC
-                &kp TAB    &kp SQT &kp COMMA &kp DOT &kp P &kp Y &kp F &kp G &kp C &kp R   &kp L  &kp FSLH  &kp EQUAL &kp BSLH
-                &kp CAPS   &kp A   &kp O  &kp E  &kp U  &kp I  &kp D  &kp H  &kp T &kp N   &kp S  &kp MINUS &kp END   &kp ENTER 
-                &kp LSHFT &kp SEMI &kp Q  &kp J  &kp K  &kp X  &kp B  &kp M  &kp W &kp V   &kp Z  &kp HOME  &kp UP    &trans
-                &kp LCTRL &kp LGUI &kp LALT                &kp SPACE               &kp F13 &mo 3  &kp LEFT  &kp DOWN  &kp RIGHT
-            >;
-        };
-
-        macOS_Layer { // Layer 2 | macOS Layer
+        macOS_Layer { // Layer 1 | macOS Layer
             bindings = <
                 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8    &kp N9  &kp N0   &kp MINUS &kp EQUAL &kp BSPC
                 &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I     &kp O   &kp P    &kp LBKT  &kp RBKT  &kp BSLH
@@ -90,31 +68,43 @@
             >;
         };
 
+        Hardware_Dvorak { // Layer 2 | Hardware Dvorak
+            bindings = <
+                &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8  &kp N9  &kp N0 &kp LBKT  &kp RBKT  &kp BSPC
+                &kp TAB    &kp SQT &kp COMMA &kp DOT &kp P &kp Y &kp F &kp G &kp C &kp R   &kp L  &kp FSLH  &kp EQUAL &kp BSLH
+                &kp CAPS   &kp A   &kp O  &kp E  &kp U  &kp I  &kp D  &kp H  &kp T &kp N   &kp S  &kp MINUS &kp END   &kp ENTER 
+                &kp LSHFT &kp SEMI &kp Q  &kp J  &kp K  &kp X  &kp B  &kp M  &kp W &kp V   &kp Z  &kp HOME  &kp UP    &trans
+                &trans    &trans   &trans                  &kp SPACE               &kp F13 &trans &kp LEFT  &kp DOWN  &kp RIGHT
+            >;
+        };
+
         fnLayer { // Layer 3 | fn Layer (imcomplete)
             bindings = <
-                &kp ESC    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp C_VOL_UP &kp C_VOL_DN &kp DEL
-                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans  &trans       &trans       &C_PLAY_PAUSE
-                &trans     &trans       &trans       &natuIM_zhQt &tog 6       &trans       &trans &trans &trans &trans &trans  &trans       &kp PG_DN    &trans
-                &trans     &trans       &trans       &trans       &trans       &trans       &trans &trans &trans &trans &trans  &kp PAGE_UP  &trans       &to 2
-                &trans     &trans       &kp RALT                               &trans                            &RALT  &trans  &mo 5        &kp GLOBE    &kp RALT
-            >;
+                &kp ESC    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6 &kp F7 &kp F8 &kp F9   &kp F10 &kp C_VOL_UP &kp C_VOL_DN &kp DEL
+                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans   &trans  &trans       &trans       &kp C_PLAY_PAUSE
+                &trans     &trans       &trans       &natuIM_zhQt &tog 6       &trans       &trans &trans &trans &trans   &trans  &trans       &kp PG_DN    &trans
+                &trans     &trans       &trans       &trans       &trans       &trans       &trans &trans &trans &trans   &trans  &kp PAGE_UP  &trans       &tog 1
+                &trans     &trans       &trans                                 &trans                            &kp RALT &trans  &mo 5        &kp GLOBE    &kp RALT
+            >;  
         };
+
         macOS_fnLayer { // Layer 4 | Mac fn Layer (imcomplete)  
             bindings = <
-                &kp ESC    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp C_VOL_UP &kp C_VOL_DN &kp DEL
-                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans  &trans       &trans       &C_PLAY_PAUSE
-                &trans     &trans       &trans       &natuIM_zhQt &tog 6       &trans       &trans &trans &trans &trans &trans  &trans       &kp PG_DN    &trans
-                &trans     &trans       &trans       &trans       &trans       &trans       &trans &trans &trans &trans &trans  &kp PAGE_UP  &trans       &to 2
-                &trans     &trans       &kp RALT                               &trans                            &RALT  &trans  &mo 5        &kp GLOBE    &kp RGUI
+                &kp ESC    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6 &kp F7 &kp F8 &kp F9    &kp F10 &kp C_VOL_UP &kp C_VOL_DN &kp DEL
+                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans    &trans  &trans       &trans       &kp C_PLAY_PAUSE
+                &trans     &trans       &trans       &natuIM_zhQt &tog 6       &trans       &trans &trans &trans &trans    &trans  &trans       &kp PG_DN    &trans
+                &trans     &trans       &trans       &trans       &trans       &trans       &trans &trans &trans &trans    &trans  &kp PAGE_UP  &trans       &tog 1
+                &trans     &trans       &trans                                 &trans                            &kp RALT  &trans  &mo 5        &kp GLOBE    &kp RGUI
             >;
         };
+
         fn2Layer { // Layer 5 | fn2 Layer (imcomplete)
             bindings = <
-                &studio_unlock &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans         &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans         &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans         &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &to 2
-                &trans         &trans &trans                &trans               &RALT &trans &kp GLOBE &kp DOWN &kp RALT
+                &studio_unlock &kp F14   &kp F15    &kp F16     &kp F17    &kp F18 &kp F19 &kp F20 &kp F21 &kp F22  &kp F23 &kp F11 &kp F12   &trans
+                &trans         &trans    &trans     &trans      &trans     &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans    &trans
+                &kp LS(HOME)   &kp LC(A) &kp LC(S)  &kp LS(END) &trans     &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans    &trans
+                &trans         &kp LC(Z) &kp LC(X)  &kp LC(C)   &kp LC(V)  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans    &trans
+                &trans         &trans    &kp RALT                        &trans                              &kp RALT &trans  &trans  &kp GLOBE &trans
             >;
         };
 
@@ -131,7 +121,7 @@
             bindings = <
                 &to 0  &to 1  &to 2
                 &to 3  &to 4  &to 5
-                &zed_em_kay  &test_macro &swLyr
+                &zed_em_kay    &swLyr
                 &out OUT_TOG &to 1       &studio_unlock
             >;
         };
