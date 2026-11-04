@@ -18,19 +18,19 @@
                 , <&macro_release &kp LSHFT> ;
         };
 
-        layoutShift-tapShift: layoutShift-tapShift {
+        layoutShift_tapShift: layoutShift_tapShift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &tog 1 &kp LSHFT> ;
         };
 
-        layoutShift-Supr-Space: layoutShift-Supr-Space {
+        layoutShift_Supr_Space: layoutShift_Supr_Space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &tog 1 &macro_press &kp LGUI &macro_tap &kp SPACE &macro_release &kp LGUI> ;
         };
 
-        layoutShift-Ctrl-Space: layoutShift-Ctrl-Space {
+        layoutShift_Ctrl_Space: layoutShift_Ctrl_Space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &tog 1 &macro_press &kp LCTRL &macro_tap &kp SPACE &macro_release &kp LCTRL> ;
