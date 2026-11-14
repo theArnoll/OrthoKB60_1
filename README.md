@@ -29,14 +29,14 @@ Keypad layer (At fn+U): Other keys are transparent but LAlt becomes RAlt, so if 
 - [x] physical layout and position_map layout ([.overlay](./boards/shields/arnoll_orthokb60_1/arnoll_orthokb60_1.overlay))
 - [ ] Keymap
   - Layers
-    - (0) Main layer (&kp Q &kp W, ...)
-    - (1) Mac Main layer (* mac fn / &kp GLOBE)
-    - (2) Hardware Dvorak layer (&kp SQT &kp COMMA &kp DOT &kp P, ...)
-    - (3) fn layer
-    - (4) Mac fn layer
-    - (5) fn2 layer
-    - (6) Numpad layer
-    - (7~9) Leave custom layer 1~3
+    - [x] (0) Main layer (&kp Q &kp W, ...)
+    - [x] (1) Mac Main layer (* mac fn / &kp GLOBE)
+    - [x] (2) Hardware Dvorak layer (&kp SQT &kp COMMA &kp DOT &kp P, ...)
+    - [ ] (3) fn layer
+    - [ ] (4) Mac fn layer
+    - [ ] (5) fn2 layer
+    - [ ] (6) Numpad layer
+    - [ ] (7~9) Leave custom layer 1~3
 - [x] AE, OE, UE, ES
 - [ ] Caps, Number Lock, macLock indicator
 - [ ] Leave Linux and cross-platform umlaut solution and 3 extra layers for ZMK customization
