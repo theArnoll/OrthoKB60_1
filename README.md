@@ -37,7 +37,7 @@ Keypad layer (At fn+U): Other keys are transparent but LAlt becomes RAlt, so if 
     - (5) fn2 layer
     - (6) Numpad layer
     - (7~9) Leave custom layer 1~3
-- [ ] AE, OE, UE, ES
+- [x] AE, OE, UE, ES
 - [ ] Caps, Number Lock, macLock indicator
 - [ ] Leave Linux and cross-platform umlaut solution and 3 extra layers for ZMK customization
   - fn2 + L = Linux Layer?
@@ -45,3 +45,7 @@ Keypad layer (At fn+U): Other keys are transparent but LAlt becomes RAlt, so if 
 ## To experiment
 
 https://zmk.dev/docs/keymaps/list-of-keycodes#editing
+
+## AI usage
+
+The code about AE, OE, UE, ES and cross-platform umlaut solution are generated or assisted by Gemini on Google AI Studio with paid API key.
