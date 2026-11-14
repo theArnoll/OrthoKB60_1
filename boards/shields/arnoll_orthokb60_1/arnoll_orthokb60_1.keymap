@@ -116,7 +116,7 @@
             bindings = <&macro_press &kp RALT
                         &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8
                         &macro_release &kp RALT>;
-        }
+        };
 
         umlaut_o_Windows: umlaut_o_Windows {
             compatible = "zmk,behavior-macro";
@@ -124,7 +124,7 @@
             bindings = <&macro_press &kp RALT
                         &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6
                         &macro_release &kp RALT>;
-        }
+        };
 
         umlaut_u_Windows: umlaut_u_Windows {
             compatible = "zmk,behavior-macro";
@@ -132,7 +132,7 @@
             bindings = <&macro_press &kp RALT
                         &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2
                         &macro_release &kp RALT>;
-        }
+        };
 
         eszett_Windows: eszett_Windows {
             compatible = "zmk,behavior-macro";
@@ -140,7 +140,7 @@
             bindings = <&macro_press &kp RALT
                         &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N3
                         &macro_release &kp RALT>;
-        }
+        };
 
     };
 
