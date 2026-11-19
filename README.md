@@ -36,7 +36,7 @@ Keypad layer (At fn+U): Other keys are transparent but LAlt becomes RAlt, so if 
     - [ ] (4) Mac fn layer
     - [ ] (5) fn2 layer
     - [ ] (6) Numpad layer
-    - [ ] (7~9) Leave custom layer 1~3
+    - [ ] (7\~9) Leave custom layer 1\~3
 - [x] AE, OE, UE, ES
 - [ ] Caps, Number Lock, macLock indicator
 - [ ] Leave Linux and cross-platform umlaut solution and 3 extra layers for ZMK customization
