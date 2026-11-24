@@ -11,3 +11,4 @@
 production/
 /PCB/jlcpcb
 *.backup
+*.FCBak
